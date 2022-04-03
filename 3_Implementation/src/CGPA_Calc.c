@@ -56,14 +56,14 @@ void CGPA(){
     {
         st = (studentData*)malloc(sizeof(studentData));
         memset(st, 0x0, sizeof(studentData));
-        char *val = strtok(row, ",");
+        char *val = strtok_r(row, ",");
 
         if(val)
         {
             memcpy(st->name, val, strlen(val));
-            val = strtok(NULL, ",");
+            val = strtok_r(NULL, ",");
             memcpy(st->USN, val, strlen(val));
-            val = strtok(NULL, ",");            
+            val = strtok_r(NULL, ",");            
             for(int sem=0; sem < TOTAL_SEM; sem++)
             {
                 for(int sub=0; sub<subjects[sem]; sub++)
@@ -71,7 +71,7 @@ void CGPA(){
                     if(sub != subjects[sem])
                     {
                         st->grades[sem][sub] = atoi(val);
-                        val = strtok(NULL, ",");
+                        val = strtok_r(NULL, ",");
                     }
                         
                 }
@@ -87,7 +87,7 @@ void CGPA(){
         for(int sem=0; sem < TOTAL_SEM; sem++)
         {
             //printf("Sem:%d\t SGPA:%f\t CGPA:%f\t Credits Earned:%f\n", sem+1, SGPA_Val[sem], CGPA_Val[sem],sumOfGradesAndCredits[sem]);
-            printf("Sem:%d\t SGPA:%f\t CGPA:%f\n", sem+1, SGPA_Val[sem], CGPA_Val[sem],sumOfGradesAndCredits[sem]);
+            printf("Sem:%d\t SGPA:%f\t CGPA:%f\n", sem+1, SGPA_Val[sem], CGPA_Val[sem]);
         }
         printf("********************************\n");
         free(st);

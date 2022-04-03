@@ -3,14 +3,14 @@
 void TrigCalc(){
     int choice;
     PrintChar('=');
-    printf("\n%*dTRIGONOMETRIC CALCULATOR",-40);
+    printf("\nTRIGONOMETRIC CALCULATOR");
     PrintChar('=');
     printf("\n1.Sin   2.cos   3.tan   4.sinh    5.cosh  6.tanh  7.sininv    8.cosinv    9.taninv");
     printf("\nEnter the Choice:\t");
     scanf("%d",&choice);
     double num;
         printf("\nEnter the number:");
-        scanf("%f",&num);
+        scanf("%lf",&num);
 
     switch (choice)
     {

@@ -24,7 +24,7 @@ return(factorial(n)/(factorial(n-r) * factorial(r)));
 void SciCalc(){
     int choice;
     PrintChar('=');
-    printf("\n%*dSCIENTIFIC CALCULATOR",-40);
+    printf("\nSCIENTIFIC CALCULATOR");
     PrintChar('=');
     printf("\n1.Factorial   2.Permutation   3.Combination   4.Logarithm");
     printf("\nEnter the Choice:\t");
@@ -54,7 +54,7 @@ void SciCalc(){
 
     case 4:
         printf("\nEnter the number:\t");
-        scanf("%f",&num);
+        scanf("%lf",&num);
         result = log(num);
         printf("log(%.1f) = %.2f", num, result);           
         break; 
